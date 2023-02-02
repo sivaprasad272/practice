@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+echo "Enter username: "
+read username
+#
+echo "Enter password: "
+read -s password
+#
+## Create user
+useradd $username
+#
+## Set password for the user
+echo "$password" | passwd --stdin $username
+#
+## Confirm user creation
+echo "User $username created successfully!"
+#list of users
+cat /etc/passwd
+
+# linux distribution details
+cat /etc/*-release
+~
+
