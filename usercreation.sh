@@ -10,7 +10,7 @@ read -s password
 useradd -D $username
 #
 ## Set password for the user
-echo "$password" | passwd --stdin $username
+echo "$password" | chpasswd
 #
 ## Confirm user creation
 echo "User $username created successfully!"
