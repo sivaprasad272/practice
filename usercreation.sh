@@ -1,23 +1,22 @@
 #!/bin/bash
-#
-echo "Enter username: "
-read username
-#
-echo "Enter password: "
-read -s password
-#
-## Create user
-useradd -D $username
-#
-## Set password for the user
-echo "$password" | chpasswd
-#
-## Confirm user creation
-echo "User $username created successfully!"
-#list of users
-cat /etc/passwd
 
-# linux distribution details
-cat /etc/*-release
+USER=$1
+
+#cat /etc/passwd | grep ${USER}
 
 
+#if id "$USER" >/dev/null 2>&1;
+#then
+#       echo ' User created Successfully '
+#else
+#       echo ' User Not created '
+#fi
+
+
+if id "$USER" >/dev/null 2>&1;
+then
+        echo " User $USER Already available "
+else
+        useradd $USER
+        echo " User $USER created Succesfully "
+fi
