@@ -19,5 +19,5 @@ cat /etc/passwd
 
 # linux distribution details
 cat /etc/*-release
-~
+
 
