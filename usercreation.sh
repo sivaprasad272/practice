@@ -17,6 +17,6 @@ if id "$USER" >/dev/null 2>&1;
 then
         echo " User $USER Already available "
 else
-        useradd $USER
+        useradd  -D $USER
         echo " User $USER created Succesfully "
 fi
