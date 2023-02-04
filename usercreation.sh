@@ -7,7 +7,7 @@ echo "Enter password: "
 read -s password
 #
 ## Create user
-useradd $username
+useradd -D $username
 #
 ## Set password for the user
 echo "$password" | passwd --stdin $username
